@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{6F5E4E21-A8C5-4A49-B917-412FA60B2C3F}">
+	<Platforms>
+		<Platform Name="Win32"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="..\primaryoutput\">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" IntegerKIND="integerKIND8" RealKIND="realKIND8" Traceback="true" BoundsCheck="true" StackFrameCheck="true"/>
+				<Tool Name="VFLinkerTool" OutputFile="..\primaryoutput\$(ProjectName).exe" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="..\primaryoutput\">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" IntegerKIND="integerKIND8" RealKIND="realKIND8" BoundsCheck="true"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\source\ALLOCATION.F90"/>
+		<File RelativePath=".\source\CoreCalculations.F90"/>
+		<File RelativePath=".\source\degradation.F90"/>
+		<File RelativePath=".\source\MassInputs.f90">
+			<FileConfiguration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" Optimization="optimizeDisabled" IntegerKIND="integerKIND8" RealKIND="realKIND8"/></FileConfiguration></File>
+		<File RelativePath=".\source\nonInputVariables.F90"/>
+		<File RelativePath=".\source\omega_mass_xfer.f90"/>
+		<File RelativePath=".\source\outputprocessing.f90"/>
+		<File RelativePath=".\source\ProcessMetffiles.f90"/>
+		<File RelativePath=".\source\solute_holding_capacity.f90"/>
+		<File RelativePath=".\source\StartupVVWM.F90"/>
+		<File RelativePath=".\source\Utilities.F90"/>
+		<File RelativePath=".\source\Variables.F90"/>
+		<File RelativePath=".\source\VolumeAndWashout.f90"/>
+		<File RelativePath=".\source\VVWM.f90"/></Filter></Files>
+	<Globals/></VisualStudioProject>
