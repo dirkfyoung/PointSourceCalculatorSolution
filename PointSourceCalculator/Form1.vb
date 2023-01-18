@@ -165,7 +165,7 @@
 
         result = GetWeatherDialog.ShowDialog() 'display Open dialog box
 
-        'Cancel button will cuase return without further execution
+        'Cancel button will cause return without further execution
         If result = Windows.Forms.DialogResult.Cancel Then
             Return
         End If
@@ -830,7 +830,7 @@
         AreValuesGood = True
 
         'Check whether the user has specified an input file and a directory specifying where to save output
-        'This is done by either saving a ne inpit file or retrieving an old input file
+        'This is done by either saving an input file or retrieving an old input file
         Dim inputname As String
         inputname = workingDirectoryBox.Text & "/" & ioFamilyNameBox.Text & ".psi"
         If Not System.IO.File.Exists(inputname) Then

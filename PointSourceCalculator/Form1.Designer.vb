@@ -164,7 +164,9 @@ Partial Class Form1
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.Scenario2Tab = New System.Windows.Forms.TabPage()
+        Me.WaterBody = New System.Windows.Forms.TabPage()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.FlowAveraging = New System.Windows.Forms.TextBox()
         Me.GetWeather = New System.Windows.Forms.Button()
         Me.weatherBox = New System.Windows.Forms.TextBox()
         Me.Label81 = New System.Windows.Forms.Label()
@@ -206,7 +208,7 @@ Partial Class Form1
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.DOC1Box = New System.Windows.Forms.TextBox()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Results = New System.Windows.Forms.TabPage()
         Me.UserDaysBenthic = New System.Windows.Forms.Label()
         Me.Label77 = New System.Windows.Forms.Label()
         Me.Label104 = New System.Windows.Forms.Label()
@@ -276,7 +278,7 @@ Partial Class Form1
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MoreInfo = New System.Windows.Forms.TabPage()
         Me.Label116 = New System.Windows.Forms.Label()
         Me.Label115 = New System.Windows.Forms.Label()
         Me.Label114 = New System.Windows.Forms.Label()
@@ -325,8 +327,9 @@ Partial Class Form1
         Me.BrowseTimeSeriesDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveScenarioDialog = New System.Windows.Forms.SaveFileDialog()
         Me.RetrieveScenarioDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.FlowAveraging = New System.Windows.Forms.TextBox()
-        Me.Label117 = New System.Windows.Forms.Label()
+        Me.MassSched = New System.Windows.Forms.TabPage()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Label20 = New System.Windows.Forms.Label()
         Label22 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
@@ -335,16 +338,17 @@ Partial Class Form1
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Toxicity.SuspendLayout()
-        Me.Scenario2Tab.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.WaterBody.SuspendLayout()
+        Me.Results.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
+        Me.MoreInfo.SuspendLayout()
+        Me.MassSched.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label20
         '
         Label20.AutoSize = True
-        Label20.Location = New System.Drawing.Point(12, 783)
+        Label20.Location = New System.Drawing.Point(12, 782)
         Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Label20.Name = "Label20"
         Label20.Size = New System.Drawing.Size(125, 17)
@@ -425,12 +429,13 @@ Partial Class Form1
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.ChemTab)
+        Me.TabControl1.Controls.Add(Me.MassSched)
+        Me.TabControl1.Controls.Add(Me.WaterBody)
         Me.TabControl1.Controls.Add(Me.Toxicity)
-        Me.TabControl1.Controls.Add(Me.Scenario2Tab)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.Results)
+        Me.TabControl1.Controls.Add(Me.MoreInfo)
         Me.TabControl1.Location = New System.Drawing.Point(0, 32)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(773, 738)
@@ -448,7 +453,6 @@ Partial Class Form1
         Me.ChemTab.Controls.Add(Me.Label42)
         Me.ChemTab.Controls.Add(Me.Label41)
         Me.ChemTab.Controls.Add(Me.Label40)
-        Me.ChemTab.Controls.Add(Me.GroupBox1)
         Me.ChemTab.Controls.Add(Me.Label19)
         Me.ChemTab.Controls.Add(Me.chemIdBox)
         Me.ChemTab.Controls.Add(Me.RefTempBenthBox)
@@ -468,9 +472,9 @@ Partial Class Form1
         Me.ChemTab.Controls.Add(Me.waterMetabBox)
         Me.ChemTab.Controls.Add(Me.sorptionBox)
         Me.ChemTab.Location = New System.Drawing.Point(4, 25)
-        Me.ChemTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ChemTab.Margin = New System.Windows.Forms.Padding(4)
         Me.ChemTab.Name = "ChemTab"
-        Me.ChemTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ChemTab.Padding = New System.Windows.Forms.Padding(4)
         Me.ChemTab.Size = New System.Drawing.Size(765, 709)
         Me.ChemTab.TabIndex = 0
         Me.ChemTab.Text = "Chemical"
@@ -500,9 +504,9 @@ Partial Class Form1
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
         Me.GroupBox2.Location = New System.Drawing.Point(11, 178)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.GroupBox2.Size = New System.Drawing.Size(577, 194)
         Me.GroupBox2.TabIndex = 54
@@ -524,7 +528,7 @@ Partial Class Form1
         '
         Me.HenryRefTempBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HenryRefTempBox.Location = New System.Drawing.Point(420, 156)
-        Me.HenryRefTempBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HenryRefTempBox.Margin = New System.Windows.Forms.Padding(4)
         Me.HenryRefTempBox.Name = "HenryRefTempBox"
         Me.HenryRefTempBox.Size = New System.Drawing.Size(79, 23)
         Me.HenryRefTempBox.TabIndex = 52
@@ -580,7 +584,7 @@ Partial Class Form1
         '
         Me.EstimateHenry.AutoSize = True
         Me.EstimateHenry.Location = New System.Drawing.Point(76, 92)
-        Me.EstimateHenry.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EstimateHenry.Margin = New System.Windows.Forms.Padding(4)
         Me.EstimateHenry.Name = "EstimateHenry"
         Me.EstimateHenry.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.EstimateHenry.Size = New System.Drawing.Size(17, 16)
@@ -591,7 +595,7 @@ Partial Class Form1
         '
         Me.gotHenry.AutoSize = True
         Me.gotHenry.Location = New System.Drawing.Point(76, 135)
-        Me.gotHenry.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gotHenry.Margin = New System.Windows.Forms.Padding(4)
         Me.gotHenry.Name = "gotHenry"
         Me.gotHenry.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gotHenry.Size = New System.Drawing.Size(17, 16)
@@ -603,7 +607,7 @@ Partial Class Form1
         Me.NoVolatilization.AutoSize = True
         Me.NoVolatilization.Checked = True
         Me.NoVolatilization.Location = New System.Drawing.Point(76, 48)
-        Me.NoVolatilization.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NoVolatilization.Margin = New System.Windows.Forms.Padding(4)
         Me.NoVolatilization.Name = "NoVolatilization"
         Me.NoVolatilization.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.NoVolatilization.Size = New System.Drawing.Size(17, 16)
@@ -626,7 +630,7 @@ Partial Class Form1
         '
         Me.heatHenryBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.heatHenryBox.Location = New System.Drawing.Point(420, 132)
-        Me.heatHenryBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.heatHenryBox.Margin = New System.Windows.Forms.Padding(4)
         Me.heatHenryBox.Name = "heatHenryBox"
         Me.heatHenryBox.Size = New System.Drawing.Size(79, 23)
         Me.heatHenryBox.TabIndex = 13
@@ -637,7 +641,7 @@ Partial Class Form1
         '
         Me.henryBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.henryBox.Location = New System.Drawing.Point(420, 102)
-        Me.henryBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.henryBox.Margin = New System.Windows.Forms.Padding(4)
         Me.henryBox.Name = "henryBox"
         Me.henryBox.Size = New System.Drawing.Size(79, 23)
         Me.henryBox.TabIndex = 12
@@ -669,7 +673,7 @@ Partial Class Form1
         '
         Me.solBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.solBox.Location = New System.Drawing.Point(420, 73)
-        Me.solBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.solBox.Margin = New System.Windows.Forms.Padding(4)
         Me.solBox.Name = "solBox"
         Me.solBox.Size = New System.Drawing.Size(79, 23)
         Me.solBox.TabIndex = 11
@@ -679,7 +683,7 @@ Partial Class Form1
         '
         Me.vpBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vpBox.Location = New System.Drawing.Point(420, 48)
-        Me.vpBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.vpBox.Margin = New System.Windows.Forms.Padding(4)
         Me.vpBox.Name = "vpBox"
         Me.vpBox.Size = New System.Drawing.Size(79, 23)
         Me.vpBox.TabIndex = 10
@@ -700,7 +704,7 @@ Partial Class Form1
         '
         Me.mwtBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mwtBox.Location = New System.Drawing.Point(420, 23)
-        Me.mwtBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mwtBox.Margin = New System.Windows.Forms.Padding(4)
         Me.mwtBox.Name = "mwtBox"
         Me.mwtBox.Size = New System.Drawing.Size(79, 23)
         Me.mwtBox.TabIndex = 9
@@ -800,6 +804,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.CheckBox1)
         Me.GroupBox1.Controls.Add(Me.Label92)
         Me.GroupBox1.Controls.Add(Me.TimeSeriesFileBox)
         Me.GroupBox1.Controls.Add(Me.UseTimeSeries)
@@ -832,11 +838,11 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.daysOffBox1)
         Me.GroupBox1.Controls.Add(Me.daysOnBox1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 380)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 22)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(567, 319)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(567, 547)
         Me.GroupBox1.TabIndex = 36
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mass Release Schedule"
@@ -857,7 +863,7 @@ Partial Class Form1
         '
         Me.TimeSeriesFileBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeSeriesFileBox.Location = New System.Drawing.Point(89, 167)
-        Me.TimeSeriesFileBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TimeSeriesFileBox.Margin = New System.Windows.Forms.Padding(4)
         Me.TimeSeriesFileBox.Name = "TimeSeriesFileBox"
         Me.TimeSeriesFileBox.Size = New System.Drawing.Size(472, 23)
         Me.TimeSeriesFileBox.TabIndex = 57
@@ -868,7 +874,7 @@ Partial Class Form1
         '
         Me.UseTimeSeries.AutoSize = True
         Me.UseTimeSeries.Location = New System.Drawing.Point(8, 139)
-        Me.UseTimeSeries.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UseTimeSeries.Margin = New System.Windows.Forms.Padding(4)
         Me.UseTimeSeries.Name = "UseTimeSeries"
         Me.UseTimeSeries.Size = New System.Drawing.Size(201, 22)
         Me.UseTimeSeries.TabIndex = 56
@@ -879,7 +885,7 @@ Partial Class Form1
         '
         Me.BrowseTimeSeries.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BrowseTimeSeries.Location = New System.Drawing.Point(245, 135)
-        Me.BrowseTimeSeries.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BrowseTimeSeries.Margin = New System.Windows.Forms.Padding(4)
         Me.BrowseTimeSeries.Name = "BrowseTimeSeries"
         Me.BrowseTimeSeries.Size = New System.Drawing.Size(136, 31)
         Me.BrowseTimeSeries.TabIndex = 55
@@ -891,7 +897,7 @@ Partial Class Form1
         '
         Me.orReadZTS.AutoSize = True
         Me.orReadZTS.Location = New System.Drawing.Point(8, 226)
-        Me.orReadZTS.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.orReadZTS.Margin = New System.Windows.Forms.Padding(4)
         Me.orReadZTS.Name = "orReadZTS"
         Me.orReadZTS.Size = New System.Drawing.Size(208, 22)
         Me.orReadZTS.TabIndex = 54
@@ -902,7 +908,7 @@ Partial Class Form1
         '
         Me.is_SpecifiedMass.AutoSize = True
         Me.is_SpecifiedMass.Location = New System.Drawing.Point(8, 47)
-        Me.is_SpecifiedMass.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.is_SpecifiedMass.Margin = New System.Windows.Forms.Padding(4)
         Me.is_SpecifiedMass.Name = "is_SpecifiedMass"
         Me.is_SpecifiedMass.Size = New System.Drawing.Size(131, 22)
         Me.is_SpecifiedMass.TabIndex = 53
@@ -913,7 +919,7 @@ Partial Class Form1
         '
         Me.use3.AutoSize = True
         Me.use3.Location = New System.Drawing.Point(161, 98)
-        Me.use3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.use3.Margin = New System.Windows.Forms.Padding(4)
         Me.use3.Name = "use3"
         Me.use3.Size = New System.Drawing.Size(18, 17)
         Me.use3.TabIndex = 52
@@ -923,7 +929,7 @@ Partial Class Form1
         '
         Me.use2.AutoSize = True
         Me.use2.Location = New System.Drawing.Point(161, 74)
-        Me.use2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.use2.Margin = New System.Windows.Forms.Padding(4)
         Me.use2.Name = "use2"
         Me.use2.Size = New System.Drawing.Size(18, 17)
         Me.use2.TabIndex = 51
@@ -933,7 +939,7 @@ Partial Class Form1
         '
         Me.use1.AutoSize = True
         Me.use1.Location = New System.Drawing.Point(161, 49)
-        Me.use1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.use1.Margin = New System.Windows.Forms.Padding(4)
         Me.use1.Name = "use1"
         Me.use1.Size = New System.Drawing.Size(18, 17)
         Me.use1.TabIndex = 50
@@ -954,7 +960,7 @@ Partial Class Form1
         '
         Me.offsetBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.offsetBox3.Location = New System.Drawing.Point(213, 95)
-        Me.offsetBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.offsetBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.offsetBox3.Name = "offsetBox3"
         Me.offsetBox3.Size = New System.Drawing.Size(59, 23)
         Me.offsetBox3.TabIndex = 48
@@ -966,7 +972,7 @@ Partial Class Form1
         '
         Me.massReleaseBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.massReleaseBox3.Location = New System.Drawing.Point(441, 95)
-        Me.massReleaseBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.massReleaseBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.massReleaseBox3.Name = "massReleaseBox3"
         Me.massReleaseBox3.Size = New System.Drawing.Size(105, 23)
         Me.massReleaseBox3.TabIndex = 46
@@ -977,7 +983,7 @@ Partial Class Form1
         '
         Me.daysOffBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOffBox3.Location = New System.Drawing.Point(355, 95)
-        Me.daysOffBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOffBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOffBox3.Name = "daysOffBox3"
         Me.daysOffBox3.Size = New System.Drawing.Size(59, 23)
         Me.daysOffBox3.TabIndex = 47
@@ -988,7 +994,7 @@ Partial Class Form1
         '
         Me.daysOnBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOnBox3.Location = New System.Drawing.Point(281, 95)
-        Me.daysOnBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOnBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOnBox3.Name = "daysOnBox3"
         Me.daysOnBox3.Size = New System.Drawing.Size(59, 23)
         Me.daysOnBox3.TabIndex = 45
@@ -998,7 +1004,7 @@ Partial Class Form1
         '
         Me.offsetBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.offsetBox2.Location = New System.Drawing.Point(213, 70)
-        Me.offsetBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.offsetBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.offsetBox2.Name = "offsetBox2"
         Me.offsetBox2.Size = New System.Drawing.Size(59, 23)
         Me.offsetBox2.TabIndex = 44
@@ -1010,7 +1016,7 @@ Partial Class Form1
         '
         Me.massReleaseBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.massReleaseBox2.Location = New System.Drawing.Point(441, 70)
-        Me.massReleaseBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.massReleaseBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.massReleaseBox2.Name = "massReleaseBox2"
         Me.massReleaseBox2.Size = New System.Drawing.Size(105, 23)
         Me.massReleaseBox2.TabIndex = 42
@@ -1021,7 +1027,7 @@ Partial Class Form1
         '
         Me.daysOffBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOffBox2.Location = New System.Drawing.Point(355, 70)
-        Me.daysOffBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOffBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOffBox2.Name = "daysOffBox2"
         Me.daysOffBox2.Size = New System.Drawing.Size(59, 23)
         Me.daysOffBox2.TabIndex = 43
@@ -1032,7 +1038,7 @@ Partial Class Form1
         '
         Me.daysOnBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOnBox2.Location = New System.Drawing.Point(281, 70)
-        Me.daysOnBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOnBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOnBox2.Name = "daysOnBox2"
         Me.daysOnBox2.Size = New System.Drawing.Size(59, 23)
         Me.daysOnBox2.TabIndex = 41
@@ -1056,7 +1062,7 @@ Partial Class Form1
         '
         Me.offsetBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.offsetBox1.Location = New System.Drawing.Point(213, 46)
-        Me.offsetBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.offsetBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.offsetBox1.Name = "offsetBox1"
         Me.offsetBox1.Size = New System.Drawing.Size(59, 23)
         Me.offsetBox1.TabIndex = 39
@@ -1092,7 +1098,7 @@ Partial Class Form1
         '
         Me.BrowseZTS.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BrowseZTS.Location = New System.Drawing.Point(247, 222)
-        Me.BrowseZTS.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BrowseZTS.Margin = New System.Windows.Forms.Padding(4)
         Me.BrowseZTS.Name = "BrowseZTS"
         Me.BrowseZTS.Size = New System.Drawing.Size(136, 31)
         Me.BrowseZTS.TabIndex = 11
@@ -1117,7 +1123,7 @@ Partial Class Form1
         '
         Me.WatershedAreaBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WatershedAreaBox.Location = New System.Drawing.Point(180, 282)
-        Me.WatershedAreaBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.WatershedAreaBox.Margin = New System.Windows.Forms.Padding(4)
         Me.WatershedAreaBox.Name = "WatershedAreaBox"
         Me.WatershedAreaBox.Size = New System.Drawing.Size(200, 23)
         Me.WatershedAreaBox.TabIndex = 36
@@ -1129,7 +1135,7 @@ Partial Class Form1
         '
         Me.ZTSFileBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ZTSFileBox.Location = New System.Drawing.Point(89, 254)
-        Me.ZTSFileBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ZTSFileBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ZTSFileBox.Name = "ZTSFileBox"
         Me.ZTSFileBox.Size = New System.Drawing.Size(472, 23)
         Me.ZTSFileBox.TabIndex = 12
@@ -1140,7 +1146,7 @@ Partial Class Form1
         '
         Me.massReleaseBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.massReleaseBox1.Location = New System.Drawing.Point(441, 46)
-        Me.massReleaseBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.massReleaseBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.massReleaseBox1.Name = "massReleaseBox1"
         Me.massReleaseBox1.Size = New System.Drawing.Size(105, 23)
         Me.massReleaseBox1.TabIndex = 15
@@ -1175,7 +1181,7 @@ Partial Class Form1
         '
         Me.daysOffBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOffBox1.Location = New System.Drawing.Point(355, 46)
-        Me.daysOffBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOffBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOffBox1.Name = "daysOffBox1"
         Me.daysOffBox1.Size = New System.Drawing.Size(59, 23)
         Me.daysOffBox1.TabIndex = 16
@@ -1186,7 +1192,7 @@ Partial Class Form1
         '
         Me.daysOnBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.daysOnBox1.Location = New System.Drawing.Point(281, 46)
-        Me.daysOnBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.daysOnBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.daysOnBox1.Name = "daysOnBox1"
         Me.daysOnBox1.Size = New System.Drawing.Size(59, 23)
         Me.daysOnBox1.TabIndex = 14
@@ -1208,7 +1214,7 @@ Partial Class Form1
         'chemIdBox
         '
         Me.chemIdBox.Location = New System.Drawing.Point(245, 7)
-        Me.chemIdBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chemIdBox.Margin = New System.Windows.Forms.Padding(4)
         Me.chemIdBox.Name = "chemIdBox"
         Me.chemIdBox.Size = New System.Drawing.Size(315, 22)
         Me.chemIdBox.TabIndex = 32
@@ -1216,7 +1222,7 @@ Partial Class Form1
         'RefTempBenthBox
         '
         Me.RefTempBenthBox.Location = New System.Drawing.Point(363, 148)
-        Me.RefTempBenthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RefTempBenthBox.Margin = New System.Windows.Forms.Padding(4)
         Me.RefTempBenthBox.Name = "RefTempBenthBox"
         Me.RefTempBenthBox.Size = New System.Drawing.Size(49, 22)
         Me.RefTempBenthBox.TabIndex = 8
@@ -1238,7 +1244,7 @@ Partial Class Form1
         'benthicBox
         '
         Me.benthicBox.Location = New System.Drawing.Point(245, 148)
-        Me.benthicBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.benthicBox.Margin = New System.Windows.Forms.Padding(4)
         Me.benthicBox.Name = "benthicBox"
         Me.benthicBox.Size = New System.Drawing.Size(79, 22)
         Me.benthicBox.TabIndex = 7
@@ -1248,7 +1254,7 @@ Partial Class Form1
         'RefTempHydrBox
         '
         Me.RefTempHydrBox.Location = New System.Drawing.Point(363, 122)
-        Me.RefTempHydrBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RefTempHydrBox.Margin = New System.Windows.Forms.Padding(4)
         Me.RefTempHydrBox.Name = "RefTempHydrBox"
         Me.RefTempHydrBox.Size = New System.Drawing.Size(49, 22)
         Me.RefTempHydrBox.TabIndex = 6
@@ -1258,7 +1264,7 @@ Partial Class Form1
         'RefLatBox
         '
         Me.RefLatBox.Location = New System.Drawing.Point(363, 96)
-        Me.RefLatBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RefLatBox.Margin = New System.Windows.Forms.Padding(4)
         Me.RefLatBox.Name = "RefLatBox"
         Me.RefLatBox.Size = New System.Drawing.Size(49, 22)
         Me.RefLatBox.TabIndex = 4
@@ -1268,7 +1274,7 @@ Partial Class Form1
         'RefTempWaterBox
         '
         Me.RefTempWaterBox.Location = New System.Drawing.Point(363, 70)
-        Me.RefTempWaterBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RefTempWaterBox.Margin = New System.Windows.Forms.Padding(4)
         Me.RefTempWaterBox.Name = "RefTempWaterBox"
         Me.RefTempWaterBox.Size = New System.Drawing.Size(49, 22)
         Me.RefTempWaterBox.TabIndex = 2
@@ -1280,7 +1286,7 @@ Partial Class Form1
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton2.Location = New System.Drawing.Point(396, 41)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RadioButton2.Size = New System.Drawing.Size(47, 22)
@@ -1295,7 +1301,7 @@ Partial Class Form1
         Me.isKoc.Checked = True
         Me.isKoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.isKoc.Location = New System.Drawing.Point(329, 41)
-        Me.isKoc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.isKoc.Margin = New System.Windows.Forms.Padding(4)
         Me.isKoc.Name = "isKoc"
         Me.isKoc.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.isKoc.Size = New System.Drawing.Size(56, 22)
@@ -1356,7 +1362,7 @@ Partial Class Form1
         'hydrolBox
         '
         Me.hydrolBox.Location = New System.Drawing.Point(245, 122)
-        Me.hydrolBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.hydrolBox.Margin = New System.Windows.Forms.Padding(4)
         Me.hydrolBox.Name = "hydrolBox"
         Me.hydrolBox.Size = New System.Drawing.Size(79, 22)
         Me.hydrolBox.TabIndex = 5
@@ -1367,7 +1373,7 @@ Partial Class Form1
         'photoBox
         '
         Me.photoBox.Location = New System.Drawing.Point(245, 96)
-        Me.photoBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.photoBox.Margin = New System.Windows.Forms.Padding(4)
         Me.photoBox.Name = "photoBox"
         Me.photoBox.Size = New System.Drawing.Size(79, 22)
         Me.photoBox.TabIndex = 3
@@ -1377,7 +1383,7 @@ Partial Class Form1
         'waterMetabBox
         '
         Me.waterMetabBox.Location = New System.Drawing.Point(245, 70)
-        Me.waterMetabBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.waterMetabBox.Margin = New System.Windows.Forms.Padding(4)
         Me.waterMetabBox.Name = "waterMetabBox"
         Me.waterMetabBox.Size = New System.Drawing.Size(79, 22)
         Me.waterMetabBox.TabIndex = 1
@@ -1387,7 +1393,7 @@ Partial Class Form1
         'sorptionBox
         '
         Me.sorptionBox.Location = New System.Drawing.Point(245, 39)
-        Me.sorptionBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.sorptionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.sorptionBox.Name = "sorptionBox"
         Me.sorptionBox.Size = New System.Drawing.Size(79, 22)
         Me.sorptionBox.TabIndex = 0
@@ -1443,9 +1449,9 @@ Partial Class Form1
         Me.Toxicity.Controls.Add(Me.Label60)
         Me.Toxicity.Controls.Add(Me.Label39)
         Me.Toxicity.Location = New System.Drawing.Point(4, 25)
-        Me.Toxicity.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Toxicity.Margin = New System.Windows.Forms.Padding(4)
         Me.Toxicity.Name = "Toxicity"
-        Me.Toxicity.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Toxicity.Padding = New System.Windows.Forms.Padding(4)
         Me.Toxicity.Size = New System.Drawing.Size(765, 709)
         Me.Toxicity.TabIndex = 1
         Me.Toxicity.Text = "Toxicity"
@@ -1454,7 +1460,7 @@ Partial Class Form1
         '
         Me.UserDefinedDaysWater.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserDefinedDaysWater.Location = New System.Drawing.Point(237, 281)
-        Me.UserDefinedDaysWater.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UserDefinedDaysWater.Margin = New System.Windows.Forms.Padding(4)
         Me.UserDefinedDaysWater.Name = "UserDefinedDaysWater"
         Me.UserDefinedDaysWater.Size = New System.Drawing.Size(45, 24)
         Me.UserDefinedDaysWater.TabIndex = 35
@@ -1465,7 +1471,7 @@ Partial Class Form1
         'CoCTotalUserBox
         '
         Me.CoCTotalUserBox.Location = New System.Drawing.Point(432, 576)
-        Me.CoCTotalUserBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotalUserBox.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotalUserBox.Name = "CoCTotalUserBox"
         Me.CoCTotalUserBox.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotalUserBox.TabIndex = 48
@@ -1489,7 +1495,7 @@ Partial Class Form1
         '
         Me.UserDefinedDaysBenthic.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserDefinedDaysBenthic.Location = New System.Drawing.Point(169, 576)
-        Me.UserDefinedDaysBenthic.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UserDefinedDaysBenthic.Margin = New System.Windows.Forms.Padding(4)
         Me.UserDefinedDaysBenthic.Name = "UserDefinedDaysBenthic"
         Me.UserDefinedDaysBenthic.Size = New System.Drawing.Size(45, 24)
         Me.UserDefinedDaysBenthic.TabIndex = 46
@@ -1512,7 +1518,7 @@ Partial Class Form1
         'CocPoreWaterUserBox
         '
         Me.CocPoreWaterUserBox.Location = New System.Drawing.Point(305, 576)
-        Me.CocPoreWaterUserBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWaterUserBox.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWaterUserBox.Name = "CocPoreWaterUserBox"
         Me.CocPoreWaterUserBox.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWaterUserBox.TabIndex = 44
@@ -1547,7 +1553,7 @@ Partial Class Form1
         'CoCTotal1Box
         '
         Me.CoCTotal1Box.Location = New System.Drawing.Point(432, 448)
-        Me.CoCTotal1Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotal1Box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotal1Box.Name = "CoCTotal1Box"
         Me.CoCTotal1Box.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotal1Box.TabIndex = 41
@@ -1558,7 +1564,7 @@ Partial Class Form1
         'CoCTotal3Box
         '
         Me.CoCTotal3Box.Location = New System.Drawing.Point(432, 473)
-        Me.CoCTotal3Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotal3Box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotal3Box.Name = "CoCTotal3Box"
         Me.CoCTotal3Box.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotal3Box.TabIndex = 40
@@ -1569,7 +1575,7 @@ Partial Class Form1
         'CoCTotal60Box
         '
         Me.CoCTotal60Box.Location = New System.Drawing.Point(432, 546)
-        Me.CoCTotal60Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotal60Box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotal60Box.Name = "CoCTotal60Box"
         Me.CoCTotal60Box.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotal60Box.TabIndex = 39
@@ -1580,7 +1586,7 @@ Partial Class Form1
         'CoCTotal28Box
         '
         Me.CoCTotal28Box.Location = New System.Drawing.Point(432, 522)
-        Me.CoCTotal28Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotal28Box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotal28Box.Name = "CoCTotal28Box"
         Me.CoCTotal28Box.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotal28Box.TabIndex = 38
@@ -1591,7 +1597,7 @@ Partial Class Form1
         'CoCTotal7Box
         '
         Me.CoCTotal7Box.Location = New System.Drawing.Point(432, 497)
-        Me.CoCTotal7Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoCTotal7Box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoCTotal7Box.Name = "CoCTotal7Box"
         Me.CoCTotal7Box.Size = New System.Drawing.Size(99, 22)
         Me.CoCTotal7Box.TabIndex = 37
@@ -1626,7 +1632,7 @@ Partial Class Form1
         'CocUserWaterBox
         '
         Me.CocUserWaterBox.Location = New System.Drawing.Point(375, 281)
-        Me.CocUserWaterBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocUserWaterBox.Margin = New System.Windows.Forms.Padding(4)
         Me.CocUserWaterBox.Name = "CocUserWaterBox"
         Me.CocUserWaterBox.Size = New System.Drawing.Size(99, 22)
         Me.CocUserWaterBox.TabIndex = 33
@@ -1637,7 +1643,7 @@ Partial Class Form1
         'CocPoreWater1box
         '
         Me.CocPoreWater1box.Location = New System.Drawing.Point(304, 448)
-        Me.CocPoreWater1box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWater1box.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWater1box.Name = "CocPoreWater1box"
         Me.CocPoreWater1box.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWater1box.TabIndex = 32
@@ -1660,7 +1666,7 @@ Partial Class Form1
         'CocPoreWater3box
         '
         Me.CocPoreWater3box.Location = New System.Drawing.Point(304, 473)
-        Me.CocPoreWater3box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWater3box.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWater3box.Name = "CocPoreWater3box"
         Me.CocPoreWater3box.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWater3box.TabIndex = 30
@@ -1671,7 +1677,7 @@ Partial Class Form1
         'CoC2box
         '
         Me.CoC2box.Location = New System.Drawing.Point(375, 103)
-        Me.CoC2box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoC2box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoC2box.Name = "CoC2box"
         Me.CoC2box.Size = New System.Drawing.Size(99, 22)
         Me.CoC2box.TabIndex = 29
@@ -1682,7 +1688,7 @@ Partial Class Form1
         'CoC1box
         '
         Me.CoC1box.Location = New System.Drawing.Point(375, 79)
-        Me.CoC1box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoC1box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoC1box.Name = "CoC1box"
         Me.CoC1box.Size = New System.Drawing.Size(99, 22)
         Me.CoC1box.TabIndex = 28
@@ -1717,7 +1723,7 @@ Partial Class Form1
         'CocPoreWater60box
         '
         Me.CocPoreWater60box.Location = New System.Drawing.Point(304, 546)
-        Me.CocPoreWater60box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWater60box.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWater60box.Name = "CocPoreWater60box"
         Me.CocPoreWater60box.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWater60box.TabIndex = 24
@@ -1752,7 +1758,7 @@ Partial Class Form1
         'CocPoreWater28box
         '
         Me.CocPoreWater28box.Location = New System.Drawing.Point(304, 522)
-        Me.CocPoreWater28box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWater28box.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWater28box.Name = "CocPoreWater28box"
         Me.CocPoreWater28box.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWater28box.TabIndex = 21
@@ -1775,7 +1781,7 @@ Partial Class Form1
         'CocPoreWater7box
         '
         Me.CocPoreWater7box.Location = New System.Drawing.Point(304, 497)
-        Me.CocPoreWater7box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CocPoreWater7box.Margin = New System.Windows.Forms.Padding(4)
         Me.CocPoreWater7box.Name = "CocPoreWater7box"
         Me.CocPoreWater7box.Size = New System.Drawing.Size(99, 22)
         Me.CocPoreWater7box.TabIndex = 19
@@ -1798,7 +1804,7 @@ Partial Class Form1
         'Coc28box
         '
         Me.Coc28box.Location = New System.Drawing.Point(375, 226)
-        Me.Coc28box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Coc28box.Margin = New System.Windows.Forms.Padding(4)
         Me.Coc28box.Name = "Coc28box"
         Me.Coc28box.Size = New System.Drawing.Size(99, 22)
         Me.Coc28box.TabIndex = 17
@@ -1821,7 +1827,7 @@ Partial Class Form1
         'CoC60box
         '
         Me.CoC60box.Location = New System.Drawing.Point(375, 251)
-        Me.CoC60box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoC60box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoC60box.Name = "CoC60box"
         Me.CoC60box.Size = New System.Drawing.Size(99, 22)
         Me.CoC60box.TabIndex = 15
@@ -1844,7 +1850,7 @@ Partial Class Form1
         'Coc21box
         '
         Me.Coc21box.Location = New System.Drawing.Point(375, 202)
-        Me.Coc21box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Coc21box.Margin = New System.Windows.Forms.Padding(4)
         Me.Coc21box.Name = "Coc21box"
         Me.Coc21box.Size = New System.Drawing.Size(99, 22)
         Me.Coc21box.TabIndex = 13
@@ -1867,7 +1873,7 @@ Partial Class Form1
         'Coc7box
         '
         Me.Coc7box.Location = New System.Drawing.Point(375, 177)
-        Me.Coc7box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Coc7box.Margin = New System.Windows.Forms.Padding(4)
         Me.Coc7box.Name = "Coc7box"
         Me.Coc7box.Size = New System.Drawing.Size(99, 22)
         Me.Coc7box.TabIndex = 11
@@ -1890,7 +1896,7 @@ Partial Class Form1
         'CoC4box
         '
         Me.CoC4box.Location = New System.Drawing.Point(375, 153)
-        Me.CoC4box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoC4box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoC4box.Name = "CoC4box"
         Me.CoC4box.Size = New System.Drawing.Size(99, 22)
         Me.CoC4box.TabIndex = 9
@@ -1913,7 +1919,7 @@ Partial Class Form1
         'CoC3box
         '
         Me.CoC3box.Location = New System.Drawing.Point(375, 128)
-        Me.CoC3box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CoC3box.Margin = New System.Windows.Forms.Padding(4)
         Me.CoC3box.Name = "CoC3box"
         Me.CoC3box.Size = New System.Drawing.Size(99, 22)
         Me.CoC3box.TabIndex = 7
@@ -1925,7 +1931,7 @@ Partial Class Form1
         '
         Me.isToxicityAnalysis.AutoSize = True
         Me.isToxicityAnalysis.Location = New System.Drawing.Point(257, 22)
-        Me.isToxicityAnalysis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.isToxicityAnalysis.Margin = New System.Windows.Forms.Padding(4)
         Me.isToxicityAnalysis.Name = "isToxicityAnalysis"
         Me.isToxicityAnalysis.Size = New System.Drawing.Size(155, 21)
         Me.isToxicityAnalysis.TabIndex = 6
@@ -1968,63 +1974,80 @@ Partial Class Form1
         Me.Label39.TabIndex = 0
         Me.Label39.Text = "Acute (1 Day Avg)"
         '
-        'Scenario2Tab
+        'WaterBody
         '
-        Me.Scenario2Tab.BackColor = System.Drawing.Color.Wheat
-        Me.Scenario2Tab.Controls.Add(Me.Label117)
-        Me.Scenario2Tab.Controls.Add(Me.FlowAveraging)
-        Me.Scenario2Tab.Controls.Add(Me.GetWeather)
-        Me.Scenario2Tab.Controls.Add(Me.weatherBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label81)
-        Me.Scenario2Tab.Controls.Add(Me.benthicdepthBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label21)
-        Me.Scenario2Tab.Controls.Add(Me.massXferBox)
-        Me.Scenario2Tab.Controls.Add(Me.biomass2Box)
-        Me.Scenario2Tab.Controls.Add(Me.scenarioIdBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label25)
-        Me.Scenario2Tab.Controls.Add(Me.Label37)
-        Me.Scenario2Tab.Controls.Add(Me.Label17)
-        Me.Scenario2Tab.Controls.Add(Me.DOC2Box)
-        Me.Scenario2Tab.Controls.Add(Me.Label34)
-        Me.Scenario2Tab.Controls.Add(Me.Label16)
-        Me.Scenario2Tab.Controls.Add(Me.Label29)
-        Me.Scenario2Tab.Controls.Add(Me.foc2Box)
-        Me.Scenario2Tab.Controls.Add(Me.Label15)
-        Me.Scenario2Tab.Controls.Add(Me.Label27)
-        Me.Scenario2Tab.Controls.Add(Me.Label30)
-        Me.Scenario2Tab.Controls.Add(Me.lengthBox)
-        Me.Scenario2Tab.Controls.Add(Me.bdBox)
-        Me.Scenario2Tab.Controls.Add(Me.porosityBox)
-        Me.Scenario2Tab.Controls.Add(Me.depthBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label28)
-        Me.Scenario2Tab.Controls.Add(Me.constFlowBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label82)
-        Me.Scenario2Tab.Controls.Add(Me.widthBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label31)
-        Me.Scenario2Tab.Controls.Add(Me.is_ConstFlow)
-        Me.Scenario2Tab.Controls.Add(Me.ssBox)
-        Me.Scenario2Tab.Controls.Add(Me.noBaseFlow)
-        Me.Scenario2Tab.Controls.Add(Me.Biomass1Box)
-        Me.Scenario2Tab.Controls.Add(Me.Label26)
-        Me.Scenario2Tab.Controls.Add(Me.Label36)
-        Me.Scenario2Tab.Controls.Add(Me.foc1Box)
-        Me.Scenario2Tab.Controls.Add(Me.dfacBox)
-        Me.Scenario2Tab.Controls.Add(Me.ChlorophyllBox)
-        Me.Scenario2Tab.Controls.Add(Me.Label35)
-        Me.Scenario2Tab.Controls.Add(Me.Label32)
-        Me.Scenario2Tab.Controls.Add(Me.Label33)
-        Me.Scenario2Tab.Controls.Add(Me.DOC1Box)
-        Me.Scenario2Tab.Location = New System.Drawing.Point(4, 25)
-        Me.Scenario2Tab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Scenario2Tab.Name = "Scenario2Tab"
-        Me.Scenario2Tab.Size = New System.Drawing.Size(765, 709)
-        Me.Scenario2Tab.TabIndex = 2
-        Me.Scenario2Tab.Text = "Scenario"
+        Me.WaterBody.BackColor = System.Drawing.Color.Wheat
+        Me.WaterBody.Controls.Add(Me.Label117)
+        Me.WaterBody.Controls.Add(Me.FlowAveraging)
+        Me.WaterBody.Controls.Add(Me.GetWeather)
+        Me.WaterBody.Controls.Add(Me.weatherBox)
+        Me.WaterBody.Controls.Add(Me.Label81)
+        Me.WaterBody.Controls.Add(Me.benthicdepthBox)
+        Me.WaterBody.Controls.Add(Me.Label21)
+        Me.WaterBody.Controls.Add(Me.massXferBox)
+        Me.WaterBody.Controls.Add(Me.biomass2Box)
+        Me.WaterBody.Controls.Add(Me.scenarioIdBox)
+        Me.WaterBody.Controls.Add(Me.Label25)
+        Me.WaterBody.Controls.Add(Me.Label37)
+        Me.WaterBody.Controls.Add(Me.Label17)
+        Me.WaterBody.Controls.Add(Me.DOC2Box)
+        Me.WaterBody.Controls.Add(Me.Label34)
+        Me.WaterBody.Controls.Add(Me.Label16)
+        Me.WaterBody.Controls.Add(Me.Label29)
+        Me.WaterBody.Controls.Add(Me.foc2Box)
+        Me.WaterBody.Controls.Add(Me.Label15)
+        Me.WaterBody.Controls.Add(Me.Label27)
+        Me.WaterBody.Controls.Add(Me.Label30)
+        Me.WaterBody.Controls.Add(Me.lengthBox)
+        Me.WaterBody.Controls.Add(Me.bdBox)
+        Me.WaterBody.Controls.Add(Me.porosityBox)
+        Me.WaterBody.Controls.Add(Me.depthBox)
+        Me.WaterBody.Controls.Add(Me.Label28)
+        Me.WaterBody.Controls.Add(Me.constFlowBox)
+        Me.WaterBody.Controls.Add(Me.Label82)
+        Me.WaterBody.Controls.Add(Me.widthBox)
+        Me.WaterBody.Controls.Add(Me.Label31)
+        Me.WaterBody.Controls.Add(Me.is_ConstFlow)
+        Me.WaterBody.Controls.Add(Me.ssBox)
+        Me.WaterBody.Controls.Add(Me.noBaseFlow)
+        Me.WaterBody.Controls.Add(Me.Biomass1Box)
+        Me.WaterBody.Controls.Add(Me.Label26)
+        Me.WaterBody.Controls.Add(Me.Label36)
+        Me.WaterBody.Controls.Add(Me.foc1Box)
+        Me.WaterBody.Controls.Add(Me.dfacBox)
+        Me.WaterBody.Controls.Add(Me.ChlorophyllBox)
+        Me.WaterBody.Controls.Add(Me.Label35)
+        Me.WaterBody.Controls.Add(Me.Label32)
+        Me.WaterBody.Controls.Add(Me.Label33)
+        Me.WaterBody.Controls.Add(Me.DOC1Box)
+        Me.WaterBody.Location = New System.Drawing.Point(4, 25)
+        Me.WaterBody.Margin = New System.Windows.Forms.Padding(4)
+        Me.WaterBody.Name = "WaterBody"
+        Me.WaterBody.Size = New System.Drawing.Size(765, 709)
+        Me.WaterBody.TabIndex = 2
+        Me.WaterBody.Text = "Waterbody"
+        '
+        'Label117
+        '
+        Me.Label117.AutoSize = True
+        Me.Label117.Location = New System.Drawing.Point(113, 267)
+        Me.Label117.Name = "Label117"
+        Me.Label117.Size = New System.Drawing.Size(148, 17)
+        Me.Label117.TabIndex = 61
+        Me.Label117.Text = "Flow Averaging (days)"
+        '
+        'FlowAveraging
+        '
+        Me.FlowAveraging.Location = New System.Drawing.Point(267, 267)
+        Me.FlowAveraging.Name = "FlowAveraging"
+        Me.FlowAveraging.Size = New System.Drawing.Size(53, 22)
+        Me.FlowAveraging.TabIndex = 60
+        Me.FlowAveraging.Text = "1"
         '
         'GetWeather
         '
         Me.GetWeather.Location = New System.Drawing.Point(51, 42)
-        Me.GetWeather.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GetWeather.Margin = New System.Windows.Forms.Padding(4)
         Me.GetWeather.Name = "GetWeather"
         Me.GetWeather.Size = New System.Drawing.Size(105, 28)
         Me.GetWeather.TabIndex = 23
@@ -2034,7 +2057,7 @@ Partial Class Form1
         'weatherBox
         '
         Me.weatherBox.Location = New System.Drawing.Point(179, 44)
-        Me.weatherBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.weatherBox.Margin = New System.Windows.Forms.Padding(4)
         Me.weatherBox.Name = "weatherBox"
         Me.weatherBox.Size = New System.Drawing.Size(369, 22)
         Me.weatherBox.TabIndex = 22
@@ -2054,7 +2077,7 @@ Partial Class Form1
         'benthicdepthBox
         '
         Me.benthicdepthBox.Location = New System.Drawing.Point(484, 368)
-        Me.benthicdepthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.benthicdepthBox.Margin = New System.Windows.Forms.Padding(4)
         Me.benthicdepthBox.Name = "benthicdepthBox"
         Me.benthicdepthBox.Size = New System.Drawing.Size(63, 22)
         Me.benthicdepthBox.TabIndex = 58
@@ -2074,7 +2097,7 @@ Partial Class Form1
         'massXferBox
         '
         Me.massXferBox.Location = New System.Drawing.Point(343, 551)
-        Me.massXferBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.massXferBox.Margin = New System.Windows.Forms.Padding(4)
         Me.massXferBox.Name = "massXferBox"
         Me.massXferBox.Size = New System.Drawing.Size(63, 22)
         Me.massXferBox.TabIndex = 46
@@ -2083,7 +2106,7 @@ Partial Class Form1
         'biomass2Box
         '
         Me.biomass2Box.Location = New System.Drawing.Point(484, 491)
-        Me.biomass2Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.biomass2Box.Margin = New System.Windows.Forms.Padding(4)
         Me.biomass2Box.Name = "biomass2Box"
         Me.biomass2Box.Size = New System.Drawing.Size(63, 22)
         Me.biomass2Box.TabIndex = 56
@@ -2093,7 +2116,7 @@ Partial Class Form1
         'scenarioIdBox
         '
         Me.scenarioIdBox.Location = New System.Drawing.Point(179, 12)
-        Me.scenarioIdBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.scenarioIdBox.Margin = New System.Windows.Forms.Padding(4)
         Me.scenarioIdBox.Name = "scenarioIdBox"
         Me.scenarioIdBox.Size = New System.Drawing.Size(369, 22)
         Me.scenarioIdBox.TabIndex = 20
@@ -2132,7 +2155,7 @@ Partial Class Form1
         'DOC2Box
         '
         Me.DOC2Box.Location = New System.Drawing.Point(484, 466)
-        Me.DOC2Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DOC2Box.Margin = New System.Windows.Forms.Padding(4)
         Me.DOC2Box.Name = "DOC2Box"
         Me.DOC2Box.Size = New System.Drawing.Size(63, 22)
         Me.DOC2Box.TabIndex = 53
@@ -2172,7 +2195,7 @@ Partial Class Form1
         'foc2Box
         '
         Me.foc2Box.Location = New System.Drawing.Point(484, 442)
-        Me.foc2Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.foc2Box.Margin = New System.Windows.Forms.Padding(4)
         Me.foc2Box.Name = "foc2Box"
         Me.foc2Box.Size = New System.Drawing.Size(63, 22)
         Me.foc2Box.TabIndex = 48
@@ -2212,7 +2235,7 @@ Partial Class Form1
         'lengthBox
         '
         Me.lengthBox.Location = New System.Drawing.Point(253, 137)
-        Me.lengthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lengthBox.Margin = New System.Windows.Forms.Padding(4)
         Me.lengthBox.Name = "lengthBox"
         Me.lengthBox.Size = New System.Drawing.Size(125, 22)
         Me.lengthBox.TabIndex = 16
@@ -2223,7 +2246,7 @@ Partial Class Form1
         'bdBox
         '
         Me.bdBox.Location = New System.Drawing.Point(484, 417)
-        Me.bdBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bdBox.Margin = New System.Windows.Forms.Padding(4)
         Me.bdBox.Name = "bdBox"
         Me.bdBox.Size = New System.Drawing.Size(63, 22)
         Me.bdBox.TabIndex = 51
@@ -2233,7 +2256,7 @@ Partial Class Form1
         'porosityBox
         '
         Me.porosityBox.Location = New System.Drawing.Point(484, 393)
-        Me.porosityBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.porosityBox.Margin = New System.Windows.Forms.Padding(4)
         Me.porosityBox.Name = "porosityBox"
         Me.porosityBox.Size = New System.Drawing.Size(63, 22)
         Me.porosityBox.TabIndex = 49
@@ -2243,7 +2266,7 @@ Partial Class Form1
         'depthBox
         '
         Me.depthBox.Location = New System.Drawing.Point(253, 110)
-        Me.depthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.depthBox.Margin = New System.Windows.Forms.Padding(4)
         Me.depthBox.Name = "depthBox"
         Me.depthBox.Size = New System.Drawing.Size(125, 22)
         Me.depthBox.TabIndex = 15
@@ -2263,7 +2286,7 @@ Partial Class Form1
         'constFlowBox
         '
         Me.constFlowBox.Location = New System.Drawing.Point(347, 185)
-        Me.constFlowBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.constFlowBox.Margin = New System.Windows.Forms.Padding(4)
         Me.constFlowBox.Name = "constFlowBox"
         Me.constFlowBox.Size = New System.Drawing.Size(124, 22)
         Me.constFlowBox.TabIndex = 7
@@ -2283,7 +2306,7 @@ Partial Class Form1
         'widthBox
         '
         Me.widthBox.Location = New System.Drawing.Point(253, 82)
-        Me.widthBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.widthBox.Margin = New System.Windows.Forms.Padding(4)
         Me.widthBox.Name = "widthBox"
         Me.widthBox.Size = New System.Drawing.Size(125, 22)
         Me.widthBox.TabIndex = 14
@@ -2304,7 +2327,7 @@ Partial Class Form1
         '
         Me.is_ConstFlow.AutoSize = True
         Me.is_ConstFlow.Location = New System.Drawing.Point(100, 186)
-        Me.is_ConstFlow.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.is_ConstFlow.Margin = New System.Windows.Forms.Padding(4)
         Me.is_ConstFlow.Name = "is_ConstFlow"
         Me.is_ConstFlow.Size = New System.Drawing.Size(237, 21)
         Me.is_ConstFlow.TabIndex = 9
@@ -2315,7 +2338,7 @@ Partial Class Form1
         'ssBox
         '
         Me.ssBox.Location = New System.Drawing.Point(217, 395)
-        Me.ssBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ssBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ssBox.Name = "ssBox"
         Me.ssBox.Size = New System.Drawing.Size(63, 22)
         Me.ssBox.TabIndex = 35
@@ -2326,7 +2349,7 @@ Partial Class Form1
         '
         Me.noBaseFlow.AutoSize = True
         Me.noBaseFlow.Location = New System.Drawing.Point(100, 222)
-        Me.noBaseFlow.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.noBaseFlow.Margin = New System.Windows.Forms.Padding(4)
         Me.noBaseFlow.Name = "noBaseFlow"
         Me.noBaseFlow.Size = New System.Drawing.Size(119, 21)
         Me.noBaseFlow.TabIndex = 10
@@ -2337,7 +2360,7 @@ Partial Class Form1
         'Biomass1Box
         '
         Me.Biomass1Box.Location = New System.Drawing.Point(217, 494)
-        Me.Biomass1Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Biomass1Box.Margin = New System.Windows.Forms.Padding(4)
         Me.Biomass1Box.Name = "Biomass1Box"
         Me.Biomass1Box.Size = New System.Drawing.Size(63, 22)
         Me.Biomass1Box.TabIndex = 43
@@ -2367,7 +2390,7 @@ Partial Class Form1
         'foc1Box
         '
         Me.foc1Box.Location = New System.Drawing.Point(217, 444)
-        Me.foc1Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.foc1Box.Margin = New System.Windows.Forms.Padding(4)
         Me.foc1Box.Name = "foc1Box"
         Me.foc1Box.Size = New System.Drawing.Size(63, 22)
         Me.foc1Box.TabIndex = 32
@@ -2377,7 +2400,7 @@ Partial Class Form1
         'dfacBox
         '
         Me.dfacBox.Location = New System.Drawing.Point(217, 370)
-        Me.dfacBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dfacBox.Margin = New System.Windows.Forms.Padding(4)
         Me.dfacBox.Name = "dfacBox"
         Me.dfacBox.Size = New System.Drawing.Size(63, 22)
         Me.dfacBox.TabIndex = 40
@@ -2387,7 +2410,7 @@ Partial Class Form1
         'ChlorophyllBox
         '
         Me.ChlorophyllBox.Location = New System.Drawing.Point(217, 420)
-        Me.ChlorophyllBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ChlorophyllBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ChlorophyllBox.Name = "ChlorophyllBox"
         Me.ChlorophyllBox.Size = New System.Drawing.Size(63, 22)
         Me.ChlorophyllBox.TabIndex = 36
@@ -2427,92 +2450,92 @@ Partial Class Form1
         'DOC1Box
         '
         Me.DOC1Box.Location = New System.Drawing.Point(217, 469)
-        Me.DOC1Box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DOC1Box.Margin = New System.Windows.Forms.Padding(4)
         Me.DOC1Box.Name = "DOC1Box"
         Me.DOC1Box.Size = New System.Drawing.Size(63, 22)
         Me.DOC1Box.TabIndex = 38
         Me.DOC1Box.Tag = "water column DOC."
         Me.DOC1Box.Text = "5.0"
         '
-        'TabPage1
+        'Results
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.Gainsboro
-        Me.TabPage1.Controls.Add(Me.UserDaysBenthic)
-        Me.TabPage1.Controls.Add(Me.Label77)
-        Me.TabPage1.Controls.Add(Me.Label104)
-        Me.TabPage1.Controls.Add(Me.totalCocExceedUser)
-        Me.TabPage1.Controls.Add(Me.totalconcUser)
-        Me.TabPage1.Controls.Add(Me.totalconc7)
-        Me.TabPage1.Controls.Add(Me.totalconc1)
-        Me.TabPage1.Controls.Add(Me.totalCocExceed3)
-        Me.TabPage1.Controls.Add(Me.totalconc3)
-        Me.TabPage1.Controls.Add(Me.totalCocExceed60)
-        Me.TabPage1.Controls.Add(Me.totalconc60)
-        Me.TabPage1.Controls.Add(Me.totalCocExceed28)
-        Me.TabPage1.Controls.Add(Me.totalconc28)
-        Me.TabPage1.Controls.Add(Me.Label105)
-        Me.TabPage1.Controls.Add(Me.totalCocExceed7)
-        Me.TabPage1.Controls.Add(Me.totalCocExceed1)
-        Me.TabPage1.Controls.Add(Me.Label103)
-        Me.TabPage1.Controls.Add(Me.Label102)
-        Me.TabPage1.Controls.Add(Me.Label101)
-        Me.TabPage1.Controls.Add(Me.pwcocUserExceed)
-        Me.TabPage1.Controls.Add(Me.pwconcUserbox)
-        Me.TabPage1.Controls.Add(Me.UserDaysWater)
-        Me.TabPage1.Controls.Add(Me.cocUserexceed)
-        Me.TabPage1.Controls.Add(Me.Label99)
-        Me.TabPage1.Controls.Add(Me.concUserBox)
-        Me.TabPage1.Controls.Add(Me.pwconc7box)
-        Me.TabPage1.Controls.Add(Me.pwconc1box)
-        Me.TabPage1.Controls.Add(Me.conc7box)
-        Me.TabPage1.Controls.Add(Me.conc1box)
-        Me.TabPage1.Controls.Add(Me.pwcoc3exceed)
-        Me.TabPage1.Controls.Add(Me.Label86)
-        Me.TabPage1.Controls.Add(Me.pwconc3box)
-        Me.TabPage1.Controls.Add(Me.pwcoc60exceed)
-        Me.TabPage1.Controls.Add(Me.Label83)
-        Me.TabPage1.Controls.Add(Me.pwconc60box)
-        Me.TabPage1.Controls.Add(Me.pwcoc28exceed)
-        Me.TabPage1.Controls.Add(Me.Label80)
-        Me.TabPage1.Controls.Add(Me.pwconc28box)
-        Me.TabPage1.Controls.Add(Me.Label76)
-        Me.TabPage1.Controls.Add(Me.pwcoc7exceed)
-        Me.TabPage1.Controls.Add(Me.pwcoc1exceed)
-        Me.TabPage1.Controls.Add(Me.Label75)
-        Me.TabPage1.Controls.Add(Me.Label74)
-        Me.TabPage1.Controls.Add(Me.coc21exceed)
-        Me.TabPage1.Controls.Add(Me.coc60exceed)
-        Me.TabPage1.Controls.Add(Me.coc28exceed)
-        Me.TabPage1.Controls.Add(Me.coc2exceed)
-        Me.TabPage1.Controls.Add(Me.coc4exceed)
-        Me.TabPage1.Controls.Add(Me.coc3exceed)
-        Me.TabPage1.Controls.Add(Me.coc7exceed)
-        Me.TabPage1.Controls.Add(Me.coc1exceed)
-        Me.TabPage1.Controls.Add(Me.Label67)
-        Me.TabPage1.Controls.Add(Me.Label66)
-        Me.TabPage1.Controls.Add(Me.Label65)
-        Me.TabPage1.Controls.Add(Me.conc21box)
-        Me.TabPage1.Controls.Add(Me.conc60box)
-        Me.TabPage1.Controls.Add(Me.conc28box)
-        Me.TabPage1.Controls.Add(Me.Label64)
-        Me.TabPage1.Controls.Add(Me.Label63)
-        Me.TabPage1.Controls.Add(Me.Label62)
-        Me.TabPage1.Controls.Add(Me.conc2box)
-        Me.TabPage1.Controls.Add(Me.conc4box)
-        Me.TabPage1.Controls.Add(Me.conc3box)
-        Me.TabPage1.Controls.Add(Me.CopyGraph)
-        Me.TabPage1.Controls.Add(Me.Chart1)
-        Me.TabPage1.Controls.Add(Me.Label38)
-        Me.TabPage1.Controls.Add(Me.Label24)
-        Me.TabPage1.Controls.Add(Me.Label14)
-        Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage1.Size = New System.Drawing.Size(765, 709)
-        Me.TabPage1.TabIndex = 3
-        Me.TabPage1.Text = "Results"
+        Me.Results.BackColor = System.Drawing.Color.Gainsboro
+        Me.Results.Controls.Add(Me.UserDaysBenthic)
+        Me.Results.Controls.Add(Me.Label77)
+        Me.Results.Controls.Add(Me.Label104)
+        Me.Results.Controls.Add(Me.totalCocExceedUser)
+        Me.Results.Controls.Add(Me.totalconcUser)
+        Me.Results.Controls.Add(Me.totalconc7)
+        Me.Results.Controls.Add(Me.totalconc1)
+        Me.Results.Controls.Add(Me.totalCocExceed3)
+        Me.Results.Controls.Add(Me.totalconc3)
+        Me.Results.Controls.Add(Me.totalCocExceed60)
+        Me.Results.Controls.Add(Me.totalconc60)
+        Me.Results.Controls.Add(Me.totalCocExceed28)
+        Me.Results.Controls.Add(Me.totalconc28)
+        Me.Results.Controls.Add(Me.Label105)
+        Me.Results.Controls.Add(Me.totalCocExceed7)
+        Me.Results.Controls.Add(Me.totalCocExceed1)
+        Me.Results.Controls.Add(Me.Label103)
+        Me.Results.Controls.Add(Me.Label102)
+        Me.Results.Controls.Add(Me.Label101)
+        Me.Results.Controls.Add(Me.pwcocUserExceed)
+        Me.Results.Controls.Add(Me.pwconcUserbox)
+        Me.Results.Controls.Add(Me.UserDaysWater)
+        Me.Results.Controls.Add(Me.cocUserexceed)
+        Me.Results.Controls.Add(Me.Label99)
+        Me.Results.Controls.Add(Me.concUserBox)
+        Me.Results.Controls.Add(Me.pwconc7box)
+        Me.Results.Controls.Add(Me.pwconc1box)
+        Me.Results.Controls.Add(Me.conc7box)
+        Me.Results.Controls.Add(Me.conc1box)
+        Me.Results.Controls.Add(Me.pwcoc3exceed)
+        Me.Results.Controls.Add(Me.Label86)
+        Me.Results.Controls.Add(Me.pwconc3box)
+        Me.Results.Controls.Add(Me.pwcoc60exceed)
+        Me.Results.Controls.Add(Me.Label83)
+        Me.Results.Controls.Add(Me.pwconc60box)
+        Me.Results.Controls.Add(Me.pwcoc28exceed)
+        Me.Results.Controls.Add(Me.Label80)
+        Me.Results.Controls.Add(Me.pwconc28box)
+        Me.Results.Controls.Add(Me.Label76)
+        Me.Results.Controls.Add(Me.pwcoc7exceed)
+        Me.Results.Controls.Add(Me.pwcoc1exceed)
+        Me.Results.Controls.Add(Me.Label75)
+        Me.Results.Controls.Add(Me.Label74)
+        Me.Results.Controls.Add(Me.coc21exceed)
+        Me.Results.Controls.Add(Me.coc60exceed)
+        Me.Results.Controls.Add(Me.coc28exceed)
+        Me.Results.Controls.Add(Me.coc2exceed)
+        Me.Results.Controls.Add(Me.coc4exceed)
+        Me.Results.Controls.Add(Me.coc3exceed)
+        Me.Results.Controls.Add(Me.coc7exceed)
+        Me.Results.Controls.Add(Me.coc1exceed)
+        Me.Results.Controls.Add(Me.Label67)
+        Me.Results.Controls.Add(Me.Label66)
+        Me.Results.Controls.Add(Me.Label65)
+        Me.Results.Controls.Add(Me.conc21box)
+        Me.Results.Controls.Add(Me.conc60box)
+        Me.Results.Controls.Add(Me.conc28box)
+        Me.Results.Controls.Add(Me.Label64)
+        Me.Results.Controls.Add(Me.Label63)
+        Me.Results.Controls.Add(Me.Label62)
+        Me.Results.Controls.Add(Me.conc2box)
+        Me.Results.Controls.Add(Me.conc4box)
+        Me.Results.Controls.Add(Me.conc3box)
+        Me.Results.Controls.Add(Me.CopyGraph)
+        Me.Results.Controls.Add(Me.Chart1)
+        Me.Results.Controls.Add(Me.Label38)
+        Me.Results.Controls.Add(Me.Label24)
+        Me.Results.Controls.Add(Me.Label14)
+        Me.Results.Controls.Add(Me.Label13)
+        Me.Results.Location = New System.Drawing.Point(4, 25)
+        Me.Results.Margin = New System.Windows.Forms.Padding(4)
+        Me.Results.Name = "Results"
+        Me.Results.Padding = New System.Windows.Forms.Padding(4)
+        Me.Results.Size = New System.Drawing.Size(765, 709)
+        Me.Results.TabIndex = 3
+        Me.Results.Text = "Results"
         '
         'UserDaysBenthic
         '
@@ -2551,7 +2574,7 @@ Partial Class Form1
         'totalCocExceedUser
         '
         Me.totalCocExceedUser.Location = New System.Drawing.Point(665, 198)
-        Me.totalCocExceedUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceedUser.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceedUser.Name = "totalCocExceedUser"
         Me.totalCocExceedUser.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceedUser.TabIndex = 89
@@ -2559,7 +2582,7 @@ Partial Class Form1
         'totalconcUser
         '
         Me.totalconcUser.Location = New System.Drawing.Point(580, 198)
-        Me.totalconcUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconcUser.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconcUser.Name = "totalconcUser"
         Me.totalconcUser.Size = New System.Drawing.Size(72, 22)
         Me.totalconcUser.TabIndex = 88
@@ -2567,7 +2590,7 @@ Partial Class Form1
         'totalconc7
         '
         Me.totalconc7.Location = New System.Drawing.Point(580, 122)
-        Me.totalconc7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconc7.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconc7.Name = "totalconc7"
         Me.totalconc7.Size = New System.Drawing.Size(72, 22)
         Me.totalconc7.TabIndex = 87
@@ -2575,7 +2598,7 @@ Partial Class Form1
         'totalconc1
         '
         Me.totalconc1.Location = New System.Drawing.Point(580, 73)
-        Me.totalconc1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconc1.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconc1.Name = "totalconc1"
         Me.totalconc1.Size = New System.Drawing.Size(72, 22)
         Me.totalconc1.TabIndex = 86
@@ -2583,7 +2606,7 @@ Partial Class Form1
         'totalCocExceed3
         '
         Me.totalCocExceed3.Location = New System.Drawing.Point(665, 97)
-        Me.totalCocExceed3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceed3.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceed3.Name = "totalCocExceed3"
         Me.totalCocExceed3.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceed3.TabIndex = 85
@@ -2591,7 +2614,7 @@ Partial Class Form1
         'totalconc3
         '
         Me.totalconc3.Location = New System.Drawing.Point(580, 97)
-        Me.totalconc3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconc3.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconc3.Name = "totalconc3"
         Me.totalconc3.Size = New System.Drawing.Size(72, 22)
         Me.totalconc3.TabIndex = 84
@@ -2599,7 +2622,7 @@ Partial Class Form1
         'totalCocExceed60
         '
         Me.totalCocExceed60.Location = New System.Drawing.Point(665, 171)
-        Me.totalCocExceed60.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceed60.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceed60.Name = "totalCocExceed60"
         Me.totalCocExceed60.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceed60.TabIndex = 83
@@ -2607,7 +2630,7 @@ Partial Class Form1
         'totalconc60
         '
         Me.totalconc60.Location = New System.Drawing.Point(580, 171)
-        Me.totalconc60.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconc60.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconc60.Name = "totalconc60"
         Me.totalconc60.Size = New System.Drawing.Size(72, 22)
         Me.totalconc60.TabIndex = 82
@@ -2615,7 +2638,7 @@ Partial Class Form1
         'totalCocExceed28
         '
         Me.totalCocExceed28.Location = New System.Drawing.Point(665, 146)
-        Me.totalCocExceed28.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceed28.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceed28.Name = "totalCocExceed28"
         Me.totalCocExceed28.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceed28.TabIndex = 81
@@ -2623,7 +2646,7 @@ Partial Class Form1
         'totalconc28
         '
         Me.totalconc28.Location = New System.Drawing.Point(580, 146)
-        Me.totalconc28.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalconc28.Margin = New System.Windows.Forms.Padding(4)
         Me.totalconc28.Name = "totalconc28"
         Me.totalconc28.Size = New System.Drawing.Size(72, 22)
         Me.totalconc28.TabIndex = 80
@@ -2642,7 +2665,7 @@ Partial Class Form1
         'totalCocExceed7
         '
         Me.totalCocExceed7.Location = New System.Drawing.Point(665, 122)
-        Me.totalCocExceed7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceed7.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceed7.Name = "totalCocExceed7"
         Me.totalCocExceed7.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceed7.TabIndex = 78
@@ -2650,7 +2673,7 @@ Partial Class Form1
         'totalCocExceed1
         '
         Me.totalCocExceed1.Location = New System.Drawing.Point(665, 73)
-        Me.totalCocExceed1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.totalCocExceed1.Margin = New System.Windows.Forms.Padding(4)
         Me.totalCocExceed1.Name = "totalCocExceed1"
         Me.totalCocExceed1.Size = New System.Drawing.Size(72, 22)
         Me.totalCocExceed1.TabIndex = 77
@@ -2692,7 +2715,7 @@ Partial Class Form1
         'pwcocUserExceed
         '
         Me.pwcocUserExceed.Location = New System.Drawing.Point(455, 199)
-        Me.pwcocUserExceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcocUserExceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcocUserExceed.Name = "pwcocUserExceed"
         Me.pwcocUserExceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcocUserExceed.TabIndex = 73
@@ -2700,7 +2723,7 @@ Partial Class Form1
         'pwconcUserbox
         '
         Me.pwconcUserbox.Location = New System.Drawing.Point(377, 199)
-        Me.pwconcUserbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconcUserbox.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconcUserbox.Name = "pwconcUserbox"
         Me.pwconcUserbox.Size = New System.Drawing.Size(72, 22)
         Me.pwconcUserbox.TabIndex = 72
@@ -2719,7 +2742,7 @@ Partial Class Form1
         'cocUserexceed
         '
         Me.cocUserexceed.Location = New System.Drawing.Point(192, 267)
-        Me.cocUserexceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cocUserexceed.Margin = New System.Windows.Forms.Padding(4)
         Me.cocUserexceed.Name = "cocUserexceed"
         Me.cocUserexceed.Size = New System.Drawing.Size(72, 22)
         Me.cocUserexceed.TabIndex = 70
@@ -2738,7 +2761,7 @@ Partial Class Form1
         'concUserBox
         '
         Me.concUserBox.Location = New System.Drawing.Point(105, 267)
-        Me.concUserBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.concUserBox.Margin = New System.Windows.Forms.Padding(4)
         Me.concUserBox.Name = "concUserBox"
         Me.concUserBox.Size = New System.Drawing.Size(72, 22)
         Me.concUserBox.TabIndex = 68
@@ -2746,7 +2769,7 @@ Partial Class Form1
         'pwconc7box
         '
         Me.pwconc7box.Location = New System.Drawing.Point(377, 123)
-        Me.pwconc7box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconc7box.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconc7box.Name = "pwconc7box"
         Me.pwconc7box.Size = New System.Drawing.Size(72, 22)
         Me.pwconc7box.TabIndex = 67
@@ -2754,7 +2777,7 @@ Partial Class Form1
         'pwconc1box
         '
         Me.pwconc1box.Location = New System.Drawing.Point(377, 74)
-        Me.pwconc1box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconc1box.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconc1box.Name = "pwconc1box"
         Me.pwconc1box.Size = New System.Drawing.Size(72, 22)
         Me.pwconc1box.TabIndex = 66
@@ -2762,7 +2785,7 @@ Partial Class Form1
         'conc7box
         '
         Me.conc7box.Location = New System.Drawing.Point(105, 166)
-        Me.conc7box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc7box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc7box.Name = "conc7box"
         Me.conc7box.Size = New System.Drawing.Size(72, 22)
         Me.conc7box.TabIndex = 65
@@ -2770,7 +2793,7 @@ Partial Class Form1
         'conc1box
         '
         Me.conc1box.Location = New System.Drawing.Point(105, 68)
-        Me.conc1box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc1box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc1box.Name = "conc1box"
         Me.conc1box.Size = New System.Drawing.Size(72, 22)
         Me.conc1box.TabIndex = 64
@@ -2778,7 +2801,7 @@ Partial Class Form1
         'pwcoc3exceed
         '
         Me.pwcoc3exceed.Location = New System.Drawing.Point(455, 98)
-        Me.pwcoc3exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcoc3exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcoc3exceed.Name = "pwcoc3exceed"
         Me.pwcoc3exceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcoc3exceed.TabIndex = 63
@@ -2797,7 +2820,7 @@ Partial Class Form1
         'pwconc3box
         '
         Me.pwconc3box.Location = New System.Drawing.Point(377, 98)
-        Me.pwconc3box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconc3box.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconc3box.Name = "pwconc3box"
         Me.pwconc3box.Size = New System.Drawing.Size(72, 22)
         Me.pwconc3box.TabIndex = 61
@@ -2805,7 +2828,7 @@ Partial Class Form1
         'pwcoc60exceed
         '
         Me.pwcoc60exceed.Location = New System.Drawing.Point(455, 172)
-        Me.pwcoc60exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcoc60exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcoc60exceed.Name = "pwcoc60exceed"
         Me.pwcoc60exceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcoc60exceed.TabIndex = 51
@@ -2824,7 +2847,7 @@ Partial Class Form1
         'pwconc60box
         '
         Me.pwconc60box.Location = New System.Drawing.Point(377, 172)
-        Me.pwconc60box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconc60box.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconc60box.Name = "pwconc60box"
         Me.pwconc60box.Size = New System.Drawing.Size(72, 22)
         Me.pwconc60box.TabIndex = 49
@@ -2832,7 +2855,7 @@ Partial Class Form1
         'pwcoc28exceed
         '
         Me.pwcoc28exceed.Location = New System.Drawing.Point(455, 148)
-        Me.pwcoc28exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcoc28exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcoc28exceed.Name = "pwcoc28exceed"
         Me.pwcoc28exceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcoc28exceed.TabIndex = 48
@@ -2851,7 +2874,7 @@ Partial Class Form1
         'pwconc28box
         '
         Me.pwconc28box.Location = New System.Drawing.Point(377, 148)
-        Me.pwconc28box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwconc28box.Margin = New System.Windows.Forms.Padding(4)
         Me.pwconc28box.Name = "pwconc28box"
         Me.pwconc28box.Size = New System.Drawing.Size(72, 22)
         Me.pwconc28box.TabIndex = 46
@@ -2870,7 +2893,7 @@ Partial Class Form1
         'pwcoc7exceed
         '
         Me.pwcoc7exceed.Location = New System.Drawing.Point(455, 123)
-        Me.pwcoc7exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcoc7exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcoc7exceed.Name = "pwcoc7exceed"
         Me.pwcoc7exceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcoc7exceed.TabIndex = 43
@@ -2878,7 +2901,7 @@ Partial Class Form1
         'pwcoc1exceed
         '
         Me.pwcoc1exceed.Location = New System.Drawing.Point(455, 74)
-        Me.pwcoc1exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pwcoc1exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.pwcoc1exceed.Name = "pwcoc1exceed"
         Me.pwcoc1exceed.Size = New System.Drawing.Size(72, 22)
         Me.pwcoc1exceed.TabIndex = 42
@@ -2908,7 +2931,7 @@ Partial Class Form1
         'coc21exceed
         '
         Me.coc21exceed.Location = New System.Drawing.Point(192, 191)
-        Me.coc21exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc21exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc21exceed.Name = "coc21exceed"
         Me.coc21exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc21exceed.TabIndex = 39
@@ -2916,7 +2939,7 @@ Partial Class Form1
         'coc60exceed
         '
         Me.coc60exceed.Location = New System.Drawing.Point(192, 240)
-        Me.coc60exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc60exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc60exceed.Name = "coc60exceed"
         Me.coc60exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc60exceed.TabIndex = 38
@@ -2924,7 +2947,7 @@ Partial Class Form1
         'coc28exceed
         '
         Me.coc28exceed.Location = New System.Drawing.Point(192, 215)
-        Me.coc28exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc28exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc28exceed.Name = "coc28exceed"
         Me.coc28exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc28exceed.TabIndex = 37
@@ -2932,7 +2955,7 @@ Partial Class Form1
         'coc2exceed
         '
         Me.coc2exceed.Location = New System.Drawing.Point(192, 92)
-        Me.coc2exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc2exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc2exceed.Name = "coc2exceed"
         Me.coc2exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc2exceed.TabIndex = 36
@@ -2940,7 +2963,7 @@ Partial Class Form1
         'coc4exceed
         '
         Me.coc4exceed.Location = New System.Drawing.Point(192, 142)
-        Me.coc4exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc4exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc4exceed.Name = "coc4exceed"
         Me.coc4exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc4exceed.TabIndex = 35
@@ -2948,7 +2971,7 @@ Partial Class Form1
         'coc3exceed
         '
         Me.coc3exceed.Location = New System.Drawing.Point(192, 117)
-        Me.coc3exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc3exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc3exceed.Name = "coc3exceed"
         Me.coc3exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc3exceed.TabIndex = 34
@@ -2956,7 +2979,7 @@ Partial Class Form1
         'coc7exceed
         '
         Me.coc7exceed.Location = New System.Drawing.Point(192, 166)
-        Me.coc7exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc7exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc7exceed.Name = "coc7exceed"
         Me.coc7exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc7exceed.TabIndex = 32
@@ -2964,7 +2987,7 @@ Partial Class Form1
         'coc1exceed
         '
         Me.coc1exceed.Location = New System.Drawing.Point(192, 68)
-        Me.coc1exceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.coc1exceed.Margin = New System.Windows.Forms.Padding(4)
         Me.coc1exceed.Name = "coc1exceed"
         Me.coc1exceed.Size = New System.Drawing.Size(72, 22)
         Me.coc1exceed.TabIndex = 31
@@ -3005,7 +3028,7 @@ Partial Class Form1
         'conc21box
         '
         Me.conc21box.Location = New System.Drawing.Point(105, 191)
-        Me.conc21box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc21box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc21box.Name = "conc21box"
         Me.conc21box.Size = New System.Drawing.Size(72, 22)
         Me.conc21box.TabIndex = 27
@@ -3013,7 +3036,7 @@ Partial Class Form1
         'conc60box
         '
         Me.conc60box.Location = New System.Drawing.Point(105, 240)
-        Me.conc60box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc60box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc60box.Name = "conc60box"
         Me.conc60box.Size = New System.Drawing.Size(72, 22)
         Me.conc60box.TabIndex = 26
@@ -3021,7 +3044,7 @@ Partial Class Form1
         'conc28box
         '
         Me.conc28box.Location = New System.Drawing.Point(105, 215)
-        Me.conc28box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc28box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc28box.Name = "conc28box"
         Me.conc28box.Size = New System.Drawing.Size(72, 22)
         Me.conc28box.TabIndex = 25
@@ -3062,7 +3085,7 @@ Partial Class Form1
         'conc2box
         '
         Me.conc2box.Location = New System.Drawing.Point(105, 92)
-        Me.conc2box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc2box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc2box.Name = "conc2box"
         Me.conc2box.Size = New System.Drawing.Size(72, 22)
         Me.conc2box.TabIndex = 21
@@ -3070,7 +3093,7 @@ Partial Class Form1
         'conc4box
         '
         Me.conc4box.Location = New System.Drawing.Point(105, 142)
-        Me.conc4box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc4box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc4box.Name = "conc4box"
         Me.conc4box.Size = New System.Drawing.Size(72, 22)
         Me.conc4box.TabIndex = 20
@@ -3078,7 +3101,7 @@ Partial Class Form1
         'conc3box
         '
         Me.conc3box.Location = New System.Drawing.Point(105, 117)
-        Me.conc3box.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.conc3box.Margin = New System.Windows.Forms.Padding(4)
         Me.conc3box.Name = "conc3box"
         Me.conc3box.Size = New System.Drawing.Size(72, 22)
         Me.conc3box.TabIndex = 19
@@ -3087,7 +3110,7 @@ Partial Class Form1
         '
         Me.CopyGraph.AutoEllipsis = True
         Me.CopyGraph.Location = New System.Drawing.Point(21, 326)
-        Me.CopyGraph.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CopyGraph.Margin = New System.Windows.Forms.Padding(4)
         Me.CopyGraph.Name = "CopyGraph"
         Me.CopyGraph.Size = New System.Drawing.Size(100, 34)
         Me.CopyGraph.TabIndex = 12
@@ -3108,7 +3131,7 @@ Partial Class Form1
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(11, 320)
-        Me.Chart1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Chart1.Margin = New System.Windows.Forms.Padding(4)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.Chart1.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.Blue, System.Drawing.Color.SaddleBrown}
@@ -3172,53 +3195,53 @@ Partial Class Form1
         Me.ToolTip1.SetToolTip(Me.Label13, "Peak concentration considering that mass enters water body uniformly over the day" &
         ".")
         '
-        'TabPage2
+        'MoreInfo
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.Label116)
-        Me.TabPage2.Controls.Add(Me.Label115)
-        Me.TabPage2.Controls.Add(Me.Label114)
-        Me.TabPage2.Controls.Add(Me.Label113)
-        Me.TabPage2.Controls.Add(Me.Label112)
-        Me.TabPage2.Controls.Add(Me.Label111)
-        Me.TabPage2.Controls.Add(Me.Label110)
-        Me.TabPage2.Controls.Add(Me.Label109)
-        Me.TabPage2.Controls.Add(Me.Label108)
-        Me.TabPage2.Controls.Add(Me.benthicTotalOut)
-        Me.TabPage2.Controls.Add(Me.benthicHydrolysisOut)
-        Me.TabPage2.Controls.Add(Me.benthicMetabolismOut)
-        Me.TabPage2.Controls.Add(Me.photolysisOut)
-        Me.TabPage2.Controls.Add(Me.hydrolysisOut)
-        Me.TabPage2.Controls.Add(Me.TotalOut)
-        Me.TabPage2.Controls.Add(Me.volatileOut)
-        Me.TabPage2.Controls.Add(Me.metabolismOut)
-        Me.TabPage2.Controls.Add(Me.washoutOut)
-        Me.TabPage2.Controls.Add(Me.Label107)
-        Me.TabPage2.Controls.Add(Me.Label106)
-        Me.TabPage2.Controls.Add(Me.Label100)
-        Me.TabPage2.Controls.Add(Me.bioPhase1)
-        Me.TabPage2.Controls.Add(Me.docPhase1)
-        Me.TabPage2.Controls.Add(Me.aqPhaseTotal)
-        Me.TabPage2.Controls.Add(Me.aqPhase2)
-        Me.TabPage2.Controls.Add(Me.Label91)
-        Me.TabPage2.Controls.Add(Me.Label90)
-        Me.TabPage2.Controls.Add(Me.Label89)
-        Me.TabPage2.Controls.Add(Me.wetConversionBox)
-        Me.TabPage2.Controls.Add(Me.dryConversionBox)
-        Me.TabPage2.Controls.Add(Me.Label88)
-        Me.TabPage2.Controls.Add(Me.Label56)
-        Me.TabPage2.Controls.Add(Me.Label87)
-        Me.TabPage2.Controls.Add(Me.Label57)
-        Me.TabPage2.Controls.Add(Me.Label23)
-        Me.TabPage2.Controls.Add(Me.ssPhase1)
-        Me.TabPage2.Controls.Add(Me.AqPhase1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabPage2.Size = New System.Drawing.Size(765, 709)
-        Me.TabPage2.TabIndex = 4
-        Me.TabPage2.Text = "More Info"
+        Me.MoreInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.MoreInfo.Controls.Add(Me.Label116)
+        Me.MoreInfo.Controls.Add(Me.Label115)
+        Me.MoreInfo.Controls.Add(Me.Label114)
+        Me.MoreInfo.Controls.Add(Me.Label113)
+        Me.MoreInfo.Controls.Add(Me.Label112)
+        Me.MoreInfo.Controls.Add(Me.Label111)
+        Me.MoreInfo.Controls.Add(Me.Label110)
+        Me.MoreInfo.Controls.Add(Me.Label109)
+        Me.MoreInfo.Controls.Add(Me.Label108)
+        Me.MoreInfo.Controls.Add(Me.benthicTotalOut)
+        Me.MoreInfo.Controls.Add(Me.benthicHydrolysisOut)
+        Me.MoreInfo.Controls.Add(Me.benthicMetabolismOut)
+        Me.MoreInfo.Controls.Add(Me.photolysisOut)
+        Me.MoreInfo.Controls.Add(Me.hydrolysisOut)
+        Me.MoreInfo.Controls.Add(Me.TotalOut)
+        Me.MoreInfo.Controls.Add(Me.volatileOut)
+        Me.MoreInfo.Controls.Add(Me.metabolismOut)
+        Me.MoreInfo.Controls.Add(Me.washoutOut)
+        Me.MoreInfo.Controls.Add(Me.Label107)
+        Me.MoreInfo.Controls.Add(Me.Label106)
+        Me.MoreInfo.Controls.Add(Me.Label100)
+        Me.MoreInfo.Controls.Add(Me.bioPhase1)
+        Me.MoreInfo.Controls.Add(Me.docPhase1)
+        Me.MoreInfo.Controls.Add(Me.aqPhaseTotal)
+        Me.MoreInfo.Controls.Add(Me.aqPhase2)
+        Me.MoreInfo.Controls.Add(Me.Label91)
+        Me.MoreInfo.Controls.Add(Me.Label90)
+        Me.MoreInfo.Controls.Add(Me.Label89)
+        Me.MoreInfo.Controls.Add(Me.wetConversionBox)
+        Me.MoreInfo.Controls.Add(Me.dryConversionBox)
+        Me.MoreInfo.Controls.Add(Me.Label88)
+        Me.MoreInfo.Controls.Add(Me.Label56)
+        Me.MoreInfo.Controls.Add(Me.Label87)
+        Me.MoreInfo.Controls.Add(Me.Label57)
+        Me.MoreInfo.Controls.Add(Me.Label23)
+        Me.MoreInfo.Controls.Add(Me.ssPhase1)
+        Me.MoreInfo.Controls.Add(Me.AqPhase1)
+        Me.MoreInfo.Location = New System.Drawing.Point(4, 25)
+        Me.MoreInfo.Margin = New System.Windows.Forms.Padding(4)
+        Me.MoreInfo.Name = "MoreInfo"
+        Me.MoreInfo.Padding = New System.Windows.Forms.Padding(4)
+        Me.MoreInfo.Size = New System.Drawing.Size(765, 709)
+        Me.MoreInfo.TabIndex = 4
+        Me.MoreInfo.Text = "More Info"
         '
         'Label116
         '
@@ -3313,7 +3336,7 @@ Partial Class Form1
         'benthicTotalOut
         '
         Me.benthicTotalOut.Location = New System.Drawing.Point(428, 518)
-        Me.benthicTotalOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.benthicTotalOut.Margin = New System.Windows.Forms.Padding(4)
         Me.benthicTotalOut.Name = "benthicTotalOut"
         Me.benthicTotalOut.Size = New System.Drawing.Size(132, 22)
         Me.benthicTotalOut.TabIndex = 29
@@ -3321,7 +3344,7 @@ Partial Class Form1
         'benthicHydrolysisOut
         '
         Me.benthicHydrolysisOut.Location = New System.Drawing.Point(428, 494)
-        Me.benthicHydrolysisOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.benthicHydrolysisOut.Margin = New System.Windows.Forms.Padding(4)
         Me.benthicHydrolysisOut.Name = "benthicHydrolysisOut"
         Me.benthicHydrolysisOut.Size = New System.Drawing.Size(132, 22)
         Me.benthicHydrolysisOut.TabIndex = 26
@@ -3329,7 +3352,7 @@ Partial Class Form1
         'benthicMetabolismOut
         '
         Me.benthicMetabolismOut.Location = New System.Drawing.Point(428, 469)
-        Me.benthicMetabolismOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.benthicMetabolismOut.Margin = New System.Windows.Forms.Padding(4)
         Me.benthicMetabolismOut.Name = "benthicMetabolismOut"
         Me.benthicMetabolismOut.Size = New System.Drawing.Size(132, 22)
         Me.benthicMetabolismOut.TabIndex = 25
@@ -3337,7 +3360,7 @@ Partial Class Form1
         'photolysisOut
         '
         Me.photolysisOut.Location = New System.Drawing.Point(428, 385)
-        Me.photolysisOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.photolysisOut.Margin = New System.Windows.Forms.Padding(4)
         Me.photolysisOut.Name = "photolysisOut"
         Me.photolysisOut.Size = New System.Drawing.Size(132, 22)
         Me.photolysisOut.TabIndex = 24
@@ -3345,7 +3368,7 @@ Partial Class Form1
         'hydrolysisOut
         '
         Me.hydrolysisOut.Location = New System.Drawing.Point(428, 361)
-        Me.hydrolysisOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.hydrolysisOut.Margin = New System.Windows.Forms.Padding(4)
         Me.hydrolysisOut.Name = "hydrolysisOut"
         Me.hydrolysisOut.Size = New System.Drawing.Size(132, 22)
         Me.hydrolysisOut.TabIndex = 23
@@ -3353,7 +3376,7 @@ Partial Class Form1
         'TotalOut
         '
         Me.TotalOut.Location = New System.Drawing.Point(428, 434)
-        Me.TotalOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TotalOut.Margin = New System.Windows.Forms.Padding(4)
         Me.TotalOut.Name = "TotalOut"
         Me.TotalOut.Size = New System.Drawing.Size(132, 22)
         Me.TotalOut.TabIndex = 22
@@ -3361,7 +3384,7 @@ Partial Class Form1
         'volatileOut
         '
         Me.volatileOut.Location = New System.Drawing.Point(428, 410)
-        Me.volatileOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.volatileOut.Margin = New System.Windows.Forms.Padding(4)
         Me.volatileOut.Name = "volatileOut"
         Me.volatileOut.Size = New System.Drawing.Size(132, 22)
         Me.volatileOut.TabIndex = 21
@@ -3369,7 +3392,7 @@ Partial Class Form1
         'metabolismOut
         '
         Me.metabolismOut.Location = New System.Drawing.Point(428, 336)
-        Me.metabolismOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.metabolismOut.Margin = New System.Windows.Forms.Padding(4)
         Me.metabolismOut.Name = "metabolismOut"
         Me.metabolismOut.Size = New System.Drawing.Size(132, 22)
         Me.metabolismOut.TabIndex = 20
@@ -3377,7 +3400,7 @@ Partial Class Form1
         'washoutOut
         '
         Me.washoutOut.Location = New System.Drawing.Point(428, 311)
-        Me.washoutOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.washoutOut.Margin = New System.Windows.Forms.Padding(4)
         Me.washoutOut.Name = "washoutOut"
         Me.washoutOut.Size = New System.Drawing.Size(132, 22)
         Me.washoutOut.TabIndex = 19
@@ -3415,7 +3438,7 @@ Partial Class Form1
         'bioPhase1
         '
         Me.bioPhase1.Location = New System.Drawing.Point(428, 140)
-        Me.bioPhase1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bioPhase1.Margin = New System.Windows.Forms.Padding(4)
         Me.bioPhase1.Name = "bioPhase1"
         Me.bioPhase1.Size = New System.Drawing.Size(132, 22)
         Me.bioPhase1.TabIndex = 11
@@ -3423,7 +3446,7 @@ Partial Class Form1
         'docPhase1
         '
         Me.docPhase1.Location = New System.Drawing.Point(428, 116)
-        Me.docPhase1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.docPhase1.Margin = New System.Windows.Forms.Padding(4)
         Me.docPhase1.Name = "docPhase1"
         Me.docPhase1.Size = New System.Drawing.Size(132, 22)
         Me.docPhase1.TabIndex = 10
@@ -3431,7 +3454,7 @@ Partial Class Form1
         'aqPhaseTotal
         '
         Me.aqPhaseTotal.Location = New System.Drawing.Point(428, 190)
-        Me.aqPhaseTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.aqPhaseTotal.Margin = New System.Windows.Forms.Padding(4)
         Me.aqPhaseTotal.Name = "aqPhaseTotal"
         Me.aqPhaseTotal.Size = New System.Drawing.Size(132, 22)
         Me.aqPhaseTotal.TabIndex = 9
@@ -3439,7 +3462,7 @@ Partial Class Form1
         'aqPhase2
         '
         Me.aqPhase2.Location = New System.Drawing.Point(428, 165)
-        Me.aqPhase2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.aqPhase2.Margin = New System.Windows.Forms.Padding(4)
         Me.aqPhase2.Name = "aqPhase2"
         Me.aqPhase2.Size = New System.Drawing.Size(132, 22)
         Me.aqPhase2.TabIndex = 8
@@ -3480,7 +3503,7 @@ Partial Class Form1
         'wetConversionBox
         '
         Me.wetConversionBox.Location = New System.Drawing.Point(460, 620)
-        Me.wetConversionBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.wetConversionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.wetConversionBox.Name = "wetConversionBox"
         Me.wetConversionBox.Size = New System.Drawing.Size(72, 22)
         Me.wetConversionBox.TabIndex = 14
@@ -3488,7 +3511,7 @@ Partial Class Form1
         'dryConversionBox
         '
         Me.dryConversionBox.Location = New System.Drawing.Point(460, 596)
-        Me.dryConversionBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dryConversionBox.Margin = New System.Windows.Forms.Padding(4)
         Me.dryConversionBox.Name = "dryConversionBox"
         Me.dryConversionBox.Size = New System.Drawing.Size(72, 22)
         Me.dryConversionBox.TabIndex = 13
@@ -3552,7 +3575,7 @@ Partial Class Form1
         'ssPhase1
         '
         Me.ssPhase1.Location = New System.Drawing.Point(428, 91)
-        Me.ssPhase1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ssPhase1.Margin = New System.Windows.Forms.Padding(4)
         Me.ssPhase1.Name = "ssPhase1"
         Me.ssPhase1.Size = New System.Drawing.Size(132, 22)
         Me.ssPhase1.TabIndex = 1
@@ -3560,7 +3583,7 @@ Partial Class Form1
         'AqPhase1
         '
         Me.AqPhase1.Location = New System.Drawing.Point(428, 66)
-        Me.AqPhase1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AqPhase1.Margin = New System.Windows.Forms.Padding(4)
         Me.AqPhase1.Name = "AqPhase1"
         Me.AqPhase1.Size = New System.Drawing.Size(132, 22)
         Me.AqPhase1.TabIndex = 0
@@ -3568,7 +3591,7 @@ Partial Class Form1
         'Run
         '
         Me.Run.Location = New System.Drawing.Point(665, 778)
-        Me.Run.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Run.Margin = New System.Windows.Forms.Padding(4)
         Me.Run.Name = "Run"
         Me.Run.Size = New System.Drawing.Size(104, 59)
         Me.Run.TabIndex = 2
@@ -3580,7 +3603,7 @@ Partial Class Form1
         Me.workingDirectoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.workingDirectoryBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.workingDirectoryBox.Location = New System.Drawing.Point(144, 783)
-        Me.workingDirectoryBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.workingDirectoryBox.Margin = New System.Windows.Forms.Padding(4)
         Me.workingDirectoryBox.Multiline = True
         Me.workingDirectoryBox.Name = "workingDirectoryBox"
         Me.workingDirectoryBox.ReadOnly = True
@@ -3592,7 +3615,7 @@ Partial Class Form1
         Me.ioFamilyNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ioFamilyNameBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ioFamilyNameBox.Location = New System.Drawing.Point(144, 827)
-        Me.ioFamilyNameBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ioFamilyNameBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ioFamilyNameBox.Name = "ioFamilyNameBox"
         Me.ioFamilyNameBox.ReadOnly = True
         Me.ioFamilyNameBox.Size = New System.Drawing.Size(336, 15)
@@ -3606,22 +3629,38 @@ Partial Class Form1
         '
         Me.RetrieveScenarioDialog.Filter = "Scenario files|*.scn|All files|*.*"
         '
-        'FlowAveraging
+        'MassSched
         '
-        Me.FlowAveraging.Location = New System.Drawing.Point(267, 267)
-        Me.FlowAveraging.Name = "FlowAveraging"
-        Me.FlowAveraging.Size = New System.Drawing.Size(53, 22)
-        Me.FlowAveraging.TabIndex = 60
-        Me.FlowAveraging.Text = "1"
+        Me.MassSched.Controls.Add(Me.GroupBox1)
+        Me.MassSched.Location = New System.Drawing.Point(4, 25)
+        Me.MassSched.Name = "MassSched"
+        Me.MassSched.Padding = New System.Windows.Forms.Padding(3)
+        Me.MassSched.Size = New System.Drawing.Size(765, 709)
+        Me.MassSched.TabIndex = 5
+        Me.MassSched.Text = "Mass Schedule"
+        Me.MassSched.UseVisualStyleBackColor = True
         '
-        'Label117
+        'CheckBox1
         '
-        Me.Label117.AutoSize = True
-        Me.Label117.Location = New System.Drawing.Point(113, 267)
-        Me.Label117.Name = "Label117"
-        Me.Label117.Size = New System.Drawing.Size(148, 17)
-        Me.Label117.TabIndex = 61
-        Me.Label117.Text = "Flow Averaging (days)"
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(12, 410)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(293, 22)
+        Me.CheckBox1.TabIndex = 59
+        Me.CheckBox1.Text = "Get Mass Schedule from Database"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(74, 440)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(472, 23)
+        Me.TextBox1.TabIndex = 60
+        Me.TextBox1.Tag = "ZTS file."
+        Me.TextBox1.Visible = False
         '
         'Form1
         '
@@ -3637,7 +3676,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -3650,13 +3689,14 @@ Partial Class Form1
         Me.GroupBox1.PerformLayout()
         Me.Toxicity.ResumeLayout(False)
         Me.Toxicity.PerformLayout()
-        Me.Scenario2Tab.ResumeLayout(False)
-        Me.Scenario2Tab.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.WaterBody.ResumeLayout(False)
+        Me.WaterBody.PerformLayout()
+        Me.Results.ResumeLayout(False)
+        Me.Results.PerformLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
+        Me.MoreInfo.ResumeLayout(False)
+        Me.MoreInfo.PerformLayout()
+        Me.MassSched.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3709,7 +3749,7 @@ Partial Class Form1
     Friend WithEvents noBaseFlow As System.Windows.Forms.RadioButton
     Friend WithEvents is_ConstFlow As System.Windows.Forms.RadioButton
     Friend WithEvents constFlowBox As System.Windows.Forms.TextBox
-    Friend WithEvents Scenario2Tab As System.Windows.Forms.TabPage
+    Friend WithEvents WaterBody As System.Windows.Forms.TabPage
     Friend WithEvents Run As System.Windows.Forms.Button
     Friend WithEvents RefTempBenthBox As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -3754,7 +3794,7 @@ Partial Class Form1
     Friend WithEvents Label33 As System.Windows.Forms.Label
     Friend WithEvents DOC1Box As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents Results As System.Windows.Forms.TabPage
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
@@ -3872,7 +3912,7 @@ Partial Class Form1
     Friend WithEvents conc1box As System.Windows.Forms.TextBox
     Friend WithEvents pwconc7box As System.Windows.Forms.TextBox
     Friend WithEvents pwconc1box As System.Windows.Forms.TextBox
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents MoreInfo As System.Windows.Forms.TabPage
     Friend WithEvents ssPhase1 As System.Windows.Forms.TextBox
     Friend WithEvents AqPhase1 As System.Windows.Forms.TextBox
     Friend WithEvents bioPhase1 As System.Windows.Forms.TextBox
@@ -3958,4 +3998,7 @@ Partial Class Form1
     Friend WithEvents RetrieveScenarioDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label117 As Label
     Friend WithEvents FlowAveraging As TextBox
+    Friend WithEvents MassSched As TabPage
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
